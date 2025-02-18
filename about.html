@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Placement Mitr</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.jpg" class="nav-logo"> Placement Mitr
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="feature.html">Features</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="about-us">
+        <div class="about-header">
+            <h1>About Placement Mitr</h1>
+            <p>Your trusted platform for seamless placement preparation, collaboration, and connection.</p>
+        </div>
+
+        <div class="about-content">
+            <div class="card">
+                
+                <h2>Our Vision</h2>
+                <p>To bridge the gap between students, universities, and companies, enabling better opportunities for all.</p>
+            </div>
+            <div class="card">
+              
+                <h2>Our Mission</h2>
+                <p>Empowering students with tools and resources for successful placements while fostering collaboration.</p>
+            </div>
+            <div class="card">
+               
+                <h2>Our Team</h2>
+                <p>A dedicated group of professionals and innovators working together to bring your placement goals closer.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Placement Mitr. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

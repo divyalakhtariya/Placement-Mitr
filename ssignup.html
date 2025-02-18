@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .signup-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 450px;
+            text-align: center;
+        }
+        .signup-container h2 {
+            margin-bottom: 20px;
+        }
+        .signup-container input {
+            width: 95%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .signup-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .signup-container button:hover {
+            background-color: #0056b3;
+        }
+        .gender-container {
+            text-align: left;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .gender-container label {
+            margin-right: 10px;
+        }
+       #female,#male{
+        height: 22px;
+        width: 22px;
+        margin: 0;
+        margin: 0 10px;
+       }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Signup</h2>
+        <form action="ssignup.php" method="POST">
+            <input type="text" name="name" placeholder="Enter Student Name" required>
+            <input type="text" name="uname" placeholder="Enter University Name" required>
+            <input type="text" name="cname" placeholder="Enter Your City Name" required>
+            <input type="text" name="cgpa" placeholder="Enter Your Previous Semester CGPA" required>
+
+            <div class="gender-container">
+                <label>Select Your Gender:</label> <br>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="male">Male</label>
+            </div>
+            
+            <input type="email" name="email" placeholder="Enter Valid Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>

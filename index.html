@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This website Helps students to Get Their Dream Job">
+    <title>Placement Mitr</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.jpg" class="nav-logo"> Placement Mitr
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="feature.html">Features</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- <li><a href="home.html" class="login-btn">Login</a></li> -->
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Placement Mitr</h1>
+            <p>Your ultimate placement guide and connection platform.</p>
+            <a href="feature.html" class="cta-btn">Get Started</a>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2>Our Features</h2>
+        <div class="feature-container">
+            <div class="feature-box">
+                <h3>For Students</h3>
+                <p>Prepare for placements with expert guidance and resources.</p>
+            </div>
+            <div class="feature-box">
+                <h3>For Universities</h3>
+                <p>Streamline student-company interactions and track performance.</p>
+            </div>
+            <div class="feature-box">
+                <h3>For Companies</h3>
+                <p>Access a pool of talented candidates for recruitment.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Placement Mitr. All Rights Reserved.</p>
+    </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+    
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+    
+</body>
+
+</html>

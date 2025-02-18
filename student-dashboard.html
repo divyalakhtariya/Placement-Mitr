@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="student-dashboard.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Student Dashboard</h1>
+    </header>
+
+    <section class="job-listing">
+        <h2>Available Jobs</h2>
+        <table class="job-table">
+            <thead>
+                <tr>
+                    <th>Job Title</th>
+                    <th>Company</th>
+                    <th>Location</th>
+                    <th>Apply</th>
+                </tr>
+            </thead>
+            <tbody id="job-container">
+                <!-- Jobs will be loaded dynamically here -->
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        $(document).ready(function(){
+            // Fetch jobs from the backend
+            $.ajax({
+                url: "get_jobs.php",
+                type: "GET",
+                success: function(response){
+                    $("#job-container").html(response);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

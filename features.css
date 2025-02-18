@@ -1,0 +1,149 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #272767;
+    color: #fff;
+}
+
+.nav-logo {
+    height: 35px;
+    width: 35px;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* Features Section */
+.features-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.features-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #007bff;
+}
+.feature-box {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box h2 {
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+.feature-box p {
+    font-size: 1rem;
+    color: #000000;
+    
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #272767;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        text-align: left;
+        padding: 0.5rem 0;
+    }
+
+    .features-section h1 {
+        font-size: 2rem;
+    }
+
+    .feature-box {
+        width: 90%;
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .features-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .feature-box {
+        padding: 1rem;
+    }
+
+    .feature-box h2 {
+        font-size: 1.2rem;
+    }
+
+    .feature-box p {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+}

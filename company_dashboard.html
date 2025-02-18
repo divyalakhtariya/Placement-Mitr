@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Dashboard</title>
+    <link rel="stylesheet" href="company_dashboard.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Company Dashboard</h1>
+    </header>
+
+    <section class="post-job">
+        <h2>Post a Job</h2>
+        <form id="jobForm">
+            <input type="text" name="job_title" placeholder="Job Title" required>
+            <input type="text" name="company_name" placeholder="Company Name" required>
+            <input type="text" name="job_location" placeholder="Location" required>
+            <textarea name="job_description" placeholder="Job Description" required></textarea>
+            <button type="submit">Post Job</button>
+        </form>
+    </section>
+
+    <section class="job-listing">
+        <h2>Your Posted Jobs</h2>
+        <div id="job-container">
+            <!-- Posted jobs will load here dynamically -->
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function(){
+            // Load company jobs dynamically
+            function loadJobs() {
+                $.ajax({
+                    url: "get_company_jobs.php",
+                    type: "GET",
+                    success: function(response){
+                        $("#job-container").html(response);
+                    }
+                });
+            }
+
+            loadJobs(); // Load jobs on page load
+
+            // Handle job posting
+            $("#jobForm").submit(function(e){
+                e.preventDefault();
+                $.ajax({
+                    url: "post_job.php",
+                    type: "POST",
+                    data: $(this).serialize(),
+                    success: function(response){
+                        alert(response);
+                        loadJobs(); // Reload job list after posting
+                        $("#jobForm")[0].reset(); // Clear form fields
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
