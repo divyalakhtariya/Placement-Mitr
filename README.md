@@ -18,8 +18,6 @@ This project was created to strengthen front-end development skills and understa
 ## 🛠️ Tech Stack
 - **Frontend:** HTML, CSS  
 - **Additional Tools:** JavaScript
-- 
-
 ---
 
 ## 🎯 Learning Outcomes
